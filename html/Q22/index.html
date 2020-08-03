@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>POST</title>
+</head>
+
+<body>
+    <h2>合格検定試験調査</h2>
+    <form action="print.php" method="post">
+        <label>氏名：</label>
+        <input type="text" name="name"><br><br>
+
+        <label>国家試験</label><br>
+        <input type="checkbox" name="arch1[]" value="基本情報技術者試験　合格">基本情報技術者試験
+        <input type="checkbox" name="arch1[]" value="応用情報技術者試験　合格">応用情報技術者試験<br><br>
+
+        <label>サーティファイ情報処理技術者能力認定試験</label><br>
+        <input type="checkbox" name="arch2[]"value="サーティファイ情報処理技術者能力認定試験　1級　合格">1級
+        <input type="checkbox" name="arch2[]"value="サーティファイ情報処理技術者能力認定試験　2級　合格">2級
+        <input type="checkbox" name="arch2[]"value="サーティファイ情報処理技術者能力認定試験　3級　合格">3級<br><br>
+
+        <label>サーティファイJavaプログラミング能力認定試験</label><br>
+        <input type="checkbox" name="arch3[]"value="サーティファイJavaプログラミング能力認定試験　1級　合格">1級
+        <input type="checkbox" name="arch3[]"value="サーティファイJavaプログラミング能力認定試験　2級　合格">2級
+        <input type="checkbox" name="arch3[]"value="サーティファイJavaプログラミング能力認定試験　3級　合格">級<br><br>
+
+        <input type="submit" value="送信">
+    </form>
+</body>
+
+</html>
