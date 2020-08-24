@@ -18,9 +18,12 @@ services:
   myapp-db:
     container_name: myapp-db
     image: mariadb:10.5.4
+    volumes:
+      - ./selfphp:/docker-entrypoint-initdb.d
+    command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci
     environment:
       # ユーザー名やパスワードなどは適宜変更してください
-      MYSQL_DATABASE: sampledb
+      MYSQL_DATABASE: selfphp
       MYSQL_USER: sample-user
       MYSQL_PASSWORD: password/
       MYSQL_ROOT_PASSWORD: password/
